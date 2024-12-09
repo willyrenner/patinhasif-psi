@@ -230,9 +230,11 @@
                 </button>
             </div>
             <a href="{{ url('/profile') }}" class="menu-item">Perfil</a>
-            @if (Auth::user()->type == 'admin')
-                <a href="#" class="menu-item">Cadastro de Pet</a>
-            @endif
+            @auth
+                @if (Auth::user()->type == 'admin')
+                    <a href="#" class="menu-item">Cadastro de Pet</a>
+                @endif
+            @endauth
             <form action="#" method="POST">
                 @csrf
                 <button class="btn btn-outline-danger mt-3" style="width: 100%;">Logout</button>
