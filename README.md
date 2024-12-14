@@ -53,7 +53,7 @@ npm run dev
 ```
 
 ### 7. Popular o Banco de Dados com Dados de Teste
-Execute o seguinte comando para inserir dados iniciais, incluindo um usuário administrador padrão:
+Execute o seguinte comando para inserir dados iniciais, incluindo um usuário administrador padrão e 10 pets ao banco:
 
 ```bash
 php artisan db:seed
@@ -67,3 +67,6 @@ Dados do Usuário Administrador Padrão:
 ---
 
 Agora o projeto está configurado e pronto para ser usado!
+composer require barryvdh/laravel-dompdf
+
+resumindo: composer update, mudar .envexample para .env, php artisan migrate, php artisan key:generate, php artisan db:seed, npm install, php artisan serve, npm run dev.
